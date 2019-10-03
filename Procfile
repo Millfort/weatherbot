@@ -1,1 +1,1 @@
-worker: bin/whetherbot
+worker: bin/weatherbot
