@@ -1,0 +1,4 @@
+github.com/briandowns/openweathermap v0.0.0-20180804155945-5f41b7c9d92d h1:28xWzPQ9bdGxKAAwQpZipZZ9Xz8kQcgMPF9cZnvMeuI=
+github.com/briandowns/openweathermap v0.0.0-20180804155945-5f41b7c9d92d/go.mod h1:8g1Bgq9PbPpXIA3sdlWmWf2JpiWGJee/O4Q+ddYO6+k=
+github.com/yanzay/tbot/v2 v2.0.2 h1:GQ7U0HYn/b9CM2L1rWM/HRDRRsVbt4/pKZj5ucJrRxY=
+github.com/yanzay/tbot/v2 v2.0.2/go.mod h1:q0+8JblBq9tLAnKHdBIZsHwDvMS9TfO6mNfaAk1VrHg=
