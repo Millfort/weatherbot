@@ -16,6 +16,7 @@ type weatherBot struct {
 	weatherIcons map[string]string
 }
 
+// WeatherBot is the interface that provides a set of functions for using weatherbot
 type WeatherBot interface {
 	StartHandler(*tbot.Message)
 	WeatherHandler(*tbot.Message)
@@ -23,6 +24,7 @@ type WeatherBot interface {
 	HandleMessage(string, func(*tbot.Message))
 }
 
+// New attempts to creates a new WeatherBot
 func New(tgKey, owmKey string) (WeatherBot, error) {
 	wAPI, err := owm.NewCurrent("C", "en", owmKey)
 	if err != nil {
@@ -39,10 +41,12 @@ func New(tgKey, owmKey string) (WeatherBot, error) {
 	return &weatherBot, nil
 }
 
+// StartHandler is a handler functions for initiate conversation with bot
 func (wb *weatherBot) StartHandler(msg *tbot.Message) {
 	wb.client.SendMessage(msg.Chat.ID, "Напишите мне название вашего города и я скажу вам температуру")
 }
 
+// WeatherHandler is a handler function for for requesting current weather
 func (wb *weatherBot) WeatherHandler(msg *tbot.Message) {
 	err := wb.weatherAPI.CurrentByName(msg.Text)
 	if err != nil {
