@@ -28,7 +28,7 @@ func New(tgKey, owmKey string) (WeatherBot, error) {
 	if err != nil {
 		return nil, err
 	}
-	server := tbot.New("123")
+	server := tbot.New(tgKey)
 	client := server.Client()
 	weatherBot := weatherBot{
 		Server:       server,
